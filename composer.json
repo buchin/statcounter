@@ -1,0 +1,21 @@
+{
+    "name": "buchin/statcounter",
+    "description": "Extract keyword using statcounter API",
+    "type": "library",
+    "require-dev": {
+        "kahlan/kahlan": "dev-master"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Buchin\\Statcounter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mochammad Masbuchin",
+            "email": "buchin@dropsugar.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
