@@ -1,5 +1,7 @@
 <?php namespace Buchin\Statcounter;
 
+use Exception;
+
 /**
  * StatCounterAPI PHP API Wrapper
  * Version 1.1
@@ -16,8 +18,8 @@ class Api
     /**
      * StatCounterAPI constructor.
      *
-     * @param $sc_username the StatCounter username
-     * @param $sc_password the StatCounter password
+     * @param $sc_username string StatCounter username
+     * @param $sc_password string StatCounter password
      */
     public function __construct($sc_username, $sc_password)
     {
@@ -89,7 +91,7 @@ class Api
 
             return $result;
         }
-        throw new Exception("XML error: Check your username and password.");
+        throw new \Exception("XML error: Check your username and password.");
     }
 
     /**
@@ -548,9 +550,9 @@ class Api
      */
     public function get_recent_pageload_activity_date_range(
         $project_id,
-        $device = "all",
         $start_date,
         $end_date,
+        $device = "all",
         $num_of_results = 20,
         $offset = 0
     ) {
@@ -621,9 +623,9 @@ class Api
      */
     public function get_exit_link_activity_date_range(
         $project_id,
-        $device = "all",
         $start_date,
         $end_date,
+        $device = "all",
         $num_of_results = 20,
         $offset = 0
     ) {
@@ -682,9 +684,9 @@ class Api
      */
     public function get_download_link_activity_date_range(
         $project_id,
-        $device = "all",
         $start_date,
         $end_date,
+        $device = "all",
         $num_of_results = 20,
         $offset = 0
     ) {

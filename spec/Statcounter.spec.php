@@ -3,8 +3,8 @@ namespace Buchin\Statcounter;
 
 describe("Statcounter", function () {
     given("sc", function () {
-        $user = "username";
-        $pass = "api_password";
+        $user = "user";
+        $pass = "pass";
 
         $sc = new Statcounter($user, $pass);
 
@@ -20,12 +20,14 @@ describe("Statcounter", function () {
 
     describe("getKeywords()", function () {
         it("returns array of keywords", function () {
-            $user = "username";
-            $pass = "api_password";
+            $user = "user";
+            $pass = "pass";
 
             $sc = new Statcounter($user, $pass);
 
-            $keywords = $this->sc->getKeywords();
+            $keywords = $this->sc->getKeywords(['12702429']);
+
+            var_dump($keywords, count($keywords));
 
             expect($keywords)->toBeA("array");
         });

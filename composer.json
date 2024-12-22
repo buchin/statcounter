@@ -17,5 +17,8 @@
             "email": "buchin@dropsugar.com"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+  "require": {
+    "ext-json": "*"
+  }
 }
